@@ -14,7 +14,7 @@
 
 .hero-section {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 170px);
   background-image: url("../img/pexels-jack-sparrow-4198972.jpg");
   background-size: cover;
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .hero-section .logo {
-  height: 150px;
+  height: 120px;
   display: block;
   margin: auto;
 }
@@ -156,6 +156,12 @@
 
 .nxt-btn {
   right: 0;
+}
+.carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+  color: #13294c;
 }
 
 .pre-btn img,
