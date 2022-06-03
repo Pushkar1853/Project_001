@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:image" content="img/light-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Electronics - Best Online Store</title>
+    <title>The Mall - The Best Online Store</title>
 
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/nav.css" />
@@ -14,6 +15,16 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav class="navbar">
@@ -45,13 +56,13 @@
           <a href="#"><img src="img/img/cart3.svg" alt="" /></a>
         </div>
       </div>
-      <ul class="links-container">
+      <!-- <ul class="links-container">
         <li class="link-item"><a href="#" class="link">home</a></li>
         <li class="link-item"><a href="#" class="link">women</a></li>
         <li class="link-item"><a href="#" class="link">men</a></li>
         <li class="link-item"><a href="#" class="link">kids</a></li>
         <li class="link-item"><a href="#" class="link">accessories</a></li>
-      </ul>
+      </ul> -->
     </nav>
 
     <!-- section hero -->
@@ -61,7 +72,7 @@
         <p class="sub-heading">Desire, discover, and relish</p>
       </div>
     </header>
-    <br><br>
+    <br /><br />
     <!-- Carousel -->
     <div
       id="carouselExampleCaptions"
@@ -94,8 +105,9 @@
         <div class="carousel-item active">
           <img
             src="img/pexels-andrea-piacquadio-974964.jpg"
-            class="d-block w-100"
-            alt="..."
+            class="crop"
+            alt="No image available!"
+            width="100%"
           />
           <div class="carousel-caption d-none d-md-block">
             <h5>Find it, love it, buy it.</h5>
@@ -104,9 +116,10 @@
         </div>
         <div class="carousel-item">
           <img
+            class="crop"
             src="img/pexels-andrea-piacquadio-974911.jpg"
-            class="d-block w-100"
-            alt="..."
+            alt="No image available!"
+            width="100%"
           />
           <div class="carousel-caption d-none d-md-block">
             <h5>Buy. Think. Grow.</h5>
@@ -116,8 +129,9 @@
         <div class="carousel-item">
           <img
             src="img/pexels-andrea-piacquadio-972995.jpg"
-            class="d-block w-100"
-            alt="..."
+            class="crop"
+            alt="No image available!"
+            width="100%"
           />
           <div class="carousel-caption d-none d-md-block">
             <h5>Experience the difference.</h5>
@@ -144,9 +158,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <!-- cards container -->
-    <section class="product">
-      <h2 class="product-catrgory">Product Listing</h2>
+    
       <button class="pre-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -177,11 +189,11 @@
           />
         </svg>
       </button>
-      <div class="product-container">
+      <div class="product">
         <div class="product-card">
           <div class="product-image">
             <span class="discount-tag">50% off</span>
-            <img src="img/card1.png" class="product-thumb" alt="" />
+        <img src="https://dummyjson.com/image/i/products/1/thumbnail.jpg" class="product-thumb" alt="" />
             <button class="card-btn">add to whislist</button>
           </div>
           <div class="product-info">
@@ -189,12 +201,84 @@
             <p class="product-short-des">a short line about the cloth..</p>
             <span class="price">$20</span><span class="actual-price">$40</span>
           </div>
+        </div> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
+  <div class="carousel-inner w-100">
+    <div class="carousel-item active">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/1/thumbnail.jpg">
         </div>
-        <!-- enter cards -->
       </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/2/thumbnail.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/3/thumbnail.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/4/thumbnail.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/5/thumbnail.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/6/thumbnail.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/7/thumbnail.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="col-md-3">
+        <div class="card card-body">
+          <img class="img-fluid" src="https://dummyjson.com/image/i/products/8/thumbnail.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        <!-- enter cards -->
+      <!-- </div>
     </section>
-    <!-- collections -->
-    <section class="collection-container">
+    <-- collections -->
+    <!-- <section class="collection-container">
       <a href="#" class="collection">
         <img src="img/women-collection.png" alt="" />
         <p class="collection-title">women <br />apparels</p>
@@ -207,7 +291,7 @@
         <img src="img/accessories-collection.png" alt="" />
         <p class="collection-title">accessories</p>
       </a>
-    </section>
+    </section> --> 
 
     <script src="js/nav.js"></script>
     <script src="js/home.js"></script>
