@@ -1,27 +1,41 @@
 .body {
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', Roboto, Oxygen, Ubuntu, Cantarell, 'SF Pro', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, Oxygen,
+    Ubuntu, Cantarell, "SF Pro", "Helvetica Neue", sans-serif;
 }
 
-.main{
-    font-size: 2rem;
-    color: #341515;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
+.main {
+  font-size: 2rem;
+  color: #341515;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.slogan{
-    font-size: 2rem;
-    color: #670707;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
+.slogan {
+  font-size: 2rem;
+  color: #670707;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.contents{
+.contents {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+.img-top {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  width: 13%;
+}
+
+.Go-Back {
+  position: relative;
+    top: 3px;
+    left: 15px;
     font-size: 1.5rem;
-    color: #000000;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 13px;
 }
