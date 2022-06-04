@@ -6,14 +6,19 @@
     <meta property="og:image" content="img/light-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Mall - The Best Online Store</title>
-
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/nav.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/cardslider.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -36,14 +41,6 @@
           alt=""
         />
         <div class="nav-items">
-          <!-- <div class="search"> -->
-          <!-- <input
-              type="text"
-              class="search-box"
-              placeholder="search brand, product"
-            />
-            <button class="search-btn">search</button>
-          </div> -->
           <form class="w-100 me-3">
             <input
               type="search"
@@ -56,15 +53,23 @@
           <a href="#"><img src="img/img/cart3.svg" alt="" /></a>
         </div>
       </div>
-      <!-- <ul class="links-container">
-        <li class="link-item"><a href="#" class="link">home</a></li>
-        <li class="link-item"><a href="#" class="link">women</a></li>
-        <li class="link-item"><a href="#" class="link">men</a></li>
-        <li class="link-item"><a href="#" class="link">kids</a></li>
-        <li class="link-item"><a href="#" class="link">accessories</a></li>
-      </ul> -->
     </nav>
-
+    <div class="search-wrapper">
+      <label for="search">Search Users</label>
+      <input type="search" id="search" data-search />
+    </div>
+    <div class="user-cards" data-user-cards-container></div>
+    <template data-user-template>
+      <div class="card">
+        <div class="header" data-header></div>
+        <div class="body" data-body></div>
+        <br>
+        <div class="footer" data-footer>
+          <div class="thumbnail" img-thumbnail>
+          </div>
+        </div>
+      </div>
+    </template>
     <!-- section hero -->
     <header class="hero-section">
       <div class="content">
@@ -158,297 +163,524 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    
-      <!-- <button class="pre-btn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="30"
-          fill="currentColor"
-          class="bi bi-arrow-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-          />
-        </svg>
-      </button>
-      <button class="nxt-btn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="30"
-          fill="currentColor"
-          class="bi bi-arrow-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-          />
-        </svg>
-      </button>
-      <div class="product">
-        <div class="product-card">
-          <div class="product-image">
-            <span class="discount-tag">50% off</span>
-        <img src="https://dummyjson.com/image/i/products/1/thumbnail.jpg" class="product-thumb" alt="" />
-            <button class="card-btn">add to whislist</button>
-          </div>
-          <div class="product-info">
-            <h2 class="product-brand">brand</h2>
-            <p class="product-short-des">a short line about the cloth..</p>
-            <span class="price">$20</span><span class="actual-price">$40</span>
-          </div>
-        </div> 
-        <br><br> -->
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+    <br /><br />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
-<h2 class="product-category">Product Listing</h2>
-<div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
-  <div class="carousel-inner w-100">
-    <div class="carousel-item active">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/1/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/2/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/3/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/4/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/5/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/6/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/7/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/8/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="col-md-3">
-        <div class="card card-body">
-          <img class="img-fluid" src="https://dummyjson.com/image/i/products/9/thumbnail.jpg">
-        </div>
-      </div>
-    </div>
-      <div class="carousel-item">
-        <div class="col-md-3">
-          <div class="card card-body">
-            <img class="img-fluid" src="https://dummyjson.com/image/i/products/10/thumbnail.jpg">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <h2 class="product-category">Product Listing</h2>
+    <!-- <div
+      id="myCarousel"
+      class="carousel slide container"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner w-100">
+        <div class="carousel-item active">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/1/thumbnail.jpg"
+              />
+            </div>
           </div>
         </div>
-      </div>
         <div class="carousel-item">
           <div class="col-md-3">
             <div class="card card-body">
-              <img class="img-fluid" src="https://dummyjson.com/image/i/products/11/thumbnail.jpg">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/2/thumbnail.jpg"
+              />
             </div>
+          </div>
         </div>
-    </div>
         <div class="carousel-item">
           <div class="col-md-3">
             <div class="card card-body">
-              <img class="img-fluid" src="https://dummyjson.com/image/i/products/12/thumbnail.jpg">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/3/thumbnail.jpg"
+              />
             </div>
-    </div>
           </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card card-body">
-                  <img class="img-fluid" src="https://dummyjson.com/image/i/products/13/thumbnail.jpg">
-                </div>
-              </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/4/thumbnail.jpg"
+              />
             </div>
-              <div class="carousel-item">
-                <div class="col-md-3">
-                  <div class="card card-body">
-                    <img class="img-fluid" src="https://dummyjson.com/image/i/products/14/thumbnail.jpg">
-                  </div>
-                </div>
-              </div>
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/15/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/16/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/17/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/18/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/19/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/20/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/21/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/22/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/23/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/24/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/25/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/26/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/27/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/28/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/29/thumbnail.jpg">
-                    </div>
-                  </div>
-                </div> 
-                <div class="carousel-item">
-                  <div class="col-md-3">
-                    <div class="card card-body">
-                      <img class="img-fluid" src="https://dummyjson.com/image/i/products/30/thumbnail.jpg">
-                    </div>
-                  </div>
-              </div> 
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/5/thumbnail.jpg"
+              />
             </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-        <!-- enter cards -->
-      <!-- </div>
-    </section>
-    <-- collections -->
-    <!-- <section class="collection-container">
-      <a href="#" class="collection">
-        <img src="img/women-collection.png" alt="" />
-        <p class="collection-title">women <br />apparels</p>
-      </a>
-      <a href="#" class="collection">
-        <img src="img/men-collection.png" alt="" />
-        <p class="collection-title">men <br />apparels</p>
-      </a>
-      <a href="#" class="collection">
-        <img src="img/accessories-collection.png" alt="" />
-        <p class="collection-title">accessories</p>
-      </a>
-    </section> --> 
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/6/thumbnail.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/7/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/8/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/9/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/10/thumbnail.jpeg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/11/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/12/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/13/thumbnail.webp"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/14/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/15/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/16/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/17/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/18/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/19/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/20/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/21/thumbnail.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/22/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/23/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/24/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/25/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/26/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/27/thumbnail.webp"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/28/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/29/thumbnail.webp"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card card-body">
+              <img
+                class="img-fluid"
+                src="https://dummyjson.com/image/i/products/30/thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="false"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
 
     <script src="js/nav.js"></script>
     <script src="js/home.js"></script>
+    <section class="container p-t-3">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- <h1><span style="color: crimson">Bootstrap 4 Card Slider</span> by webseotips</h1> -->
+        </div>
+      </div>
+    </section>
+    <section class="carousel slide" data-ride="carousel" id="postsCarousel">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-right mb-4">
+            <a class="btn btn-outline-secondary prev" href="" title="go back"
+              ><i class="fa fa-lg fa-chevron-left"></i
+            ></a>
+            <a class="btn btn-outline-secondary next" href="" title="more"
+              ><i class="fa fa-lg fa-chevron-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="container p-t-0 m-t-2 carousel-inner">
+        <div class="row row-equal carousel-item active m-t-0">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-img-top card-img-top-250">
+                <img
+                  class="img-fluid"
+                  src="img/pexels-andrea-piacquadio-974964.jpg"
+                  alt="Carousel 1"
+                />
+              </div>
+              <div class="card-block p-t-2">
+                <div class="card-header"><h3>flower1</h3></div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Praesentium animi molestias veritatis, pariatur dolorem error
+                  non reprehenderit vero, id. Incidunt hic laudantium soluta
+                  recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-img-top card-img-top-250">
+                <img
+                  class="img-fluid"
+                  src="img//pexels-andrea-piacquadio-972995.jpg"
+                  alt="Carousel 1"
+                />
+              </div>
+              <div class="card-block p-t-2">
+                <div class="card-header"><h3>flower2</h3></div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Praesentium animi molestias veritatis, pariatur dolorem error
+                  non reprehenderit vero, id. Incidunt hic laudantium soluta
+                  recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-img-top card-img-top-250">
+                <img
+                  class="img-fluid"
+                  src="img/pexels-andrea-piacquadio-974911.jpg"
+                  alt="Carousel 1"
+                />
+              </div>
+              <div class="card-block p-t-2">
+                <div class="card-header"><h3>flower1</h3></div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Praesentium animi molestias veritatis, pariatur dolorem error
+                  non reprehenderit vero, id. Incidunt hic laudantium soluta
+                  recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-equal carousel-item m-t-0">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-img-top card-img-top-250">
+                <img
+                  class="img-fluid"
+                  src="img/pexels-alesia-kozik-7341752.jpg"
+                  alt="Carousel 1"
+                />
+              </div>
+              <div class="card-block p-t-2">
+                <div class="card-header"><h3>flower1</h3></div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Praesentium animi molestias veritatis, pariatur dolorem error
+                  non reprehenderit vero, id. Incidunt hic laudantium soluta
+                  recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-img-top card-img-top-250">
+                <img
+                  class="img-fluid"
+                  src="img/pexels-jack-sparrow-4198972.jpg"
+                  alt="Carousel 1"
+                />
+              </div>
+              <div class="card-block p-t-2">
+                <div class="card-header"><h3>flower1</h3></div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Praesentium animi molestias veritatis, pariatur dolorem error
+                  non reprehenderit vero, id. Incidunt hic laudantium soluta
+                  recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-img-top card-img-top-250">
+                <img
+                  class="img-fluid"
+                  src="img/pexels-gustavo-fring-4005033.jpg"
+                  alt="Carousel 1"
+                />
+              </div>
+              <div class="card-block p-t-2">
+                <div class="card-header"><h3>flower1</h3></div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Praesentium animi molestias veritatis, pariatur dolorem error
+                  non reprehenderit vero, id. Incidunt hic laudantium soluta
+                  recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (function ($) {
+        "use strict";
+        $(".next").click(function () {
+          $(".carousel").carousel("next");
+          return false;
+        });
+        $(".prev").click(function () {
+          $(".carousel").carousel("prev");
+          return false;
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>

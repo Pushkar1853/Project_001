@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #ffffff;
+  background: #8d4452ac;
   z-index: 9;
 }
 
@@ -44,9 +44,9 @@
   padding: 10px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-  border: 1px solid #ec3c3c;
+  border: 2px solid #00000031;
   text-transform: capitalize;
-  background: none;
+  background: #ffffff92;
   color: #400f16cc;
   outline: none;
 }
@@ -58,7 +58,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background: #0b9fef5e;
+  background: #ffffff5e;
   color: rgb(11, 29, 195);
   text-transform: capitalize;
   font-size: 15px;
@@ -67,7 +67,7 @@
 }
 
 .search-box::placeholder {
-  color: #37749d;
+  color: #000000;
 }
 
 .nav-items a {
