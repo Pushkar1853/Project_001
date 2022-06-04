@@ -1,52 +1,3 @@
-
-var multipleCardCarousel = document.querySelector("#carouselExampleControls");
-if (window.matchMedia("(min-width: 768px)").matches) {
-  var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-    interval: false,
-  });
-  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-  var cardWidth = $(".carousel-item").width();
-  var scrollPosition = 0;
-  $("#carouselExampleControls .carousel-control-next").on("click", function () {
-    if (scrollPosition < carouselWidth - cardWidth * 4) {
-      scrollPosition += cardWidth;
-      $("#carouselExampleControls .carousel-inner").animate(
-        { scrollLeft: scrollPosition },
-        600
-      );
-    }
-  });
-  $("#carouselExampleControls .carousel-control-prev").on("click", function () {
-    if (scrollPosition > 0) {
-      scrollPosition -= cardWidth;
-      $("#carouselExampleControls .carousel-inner").animate(
-        { scrollLeft: scrollPosition },
-        600
-      );
-    }
-  });
-} else {
-  $(multipleCardCarousel).addClass("slide");
-}
-
-$(".carousel .carousel-item").each(function () {
-  var minPerSlide = 4;
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(":first");
-  }
-  next.children(":first-child").clone().appendTo($(this));
-
-  for (var i = 0; i < minPerSlide; i++) {
-    next = next.next();
-    if (!next.length) {
-      next = $(this).siblings(":first");
-    }
-
-    next.children(":first-child").clone().appendTo($(this));
-  }
-});
-
 const userCardTemplate = document.querySelector("[data-user-template]");
 const userCardContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
@@ -71,11 +22,11 @@ fetch("./product_dummy_data.json")
       const header = card.querySelector("[data-header]");
       const body = card.querySelector("[data-body]");
       const footer = card.querySelector("[data-footer]");
-      const img = card.querySelector("[img-thumbnail]");
+      const images = card.querySelector("[img-thumbnail]");
       header.textContent = user.title;
       body.textContent = user.brand;
       footer.textContent = user.price;
-      img.src = user.thumbnail;
+      images.src = user.thumbnail;
       userCardContainer.append(card);
       return {
         title: user.title,

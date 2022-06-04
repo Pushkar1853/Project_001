@@ -11,57 +11,36 @@
   left: 0;
   width: 100%;
   background: #8d4452ac;
-  z-index: 9;
+  z-index: 2;
 }
 
 .nav {
   padding: 10px 10vw;
   display: flex;
   justify-content: space-between;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .brand-logo {
-  height: 70px;
-  margin-left: 20px;
+  height: 90px;
+  margin-left: 10px;
 }
 
 .nav-items {
   display: flex;
   align-items: right;
-  margin-left: 700px;
+  margin-left: 350px;
 }
 
-.search-box::placeholder {
+/* .search-box::placeholder {
   color: #000000;
-}
+} */
 
 .nav-items a {
-  margin-left: 200px;
+  margin-left: 350px;
 }
 
 .nav-items a img {
   width: 30px;
 }
-.links-container {
-  width: 100%;
-  display: flex;
-  padding: 10px 10vw;
-  justify-content: center;
-  list-style: none;
-  border-top: 1px solid #853f3f;
-}
 
-.link {
-  text-transform: capitalize;
-  padding: 0 10px;
-  margin: 0 5px;
-  text-decoration: none;
-  color: #4d0909;
-  opacity: 0.5;
-  transition: 0.5s;
-}
-
-.link:hover {
-  opacity: 1;
-}
